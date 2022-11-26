@@ -1,0 +1,130 @@
+:root {
+    --main-firstcard-color: hsl(31, 77%, 52%);
+    --main-secondcard-color: hsl(184, 100%, 22%);
+    --main-thirdcard-color: hsl(179, 100%, 13%);
+    --main-paragraph-color: hsla(0, 0%, 100%, 0.75);
+    --main-headingbuttons-color: hsl(0, 0%, 95%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* 
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;
+*/
+
+body {
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--main-paragraph-color);
+    background: var(--main-headingbuttons-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200vh;
+}
+
+/* LAYOUT STYLING START */
+
+
+.wrapper {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    width: 340px;
+    height: auto;
+    /* border: 2px solid var(--main-firstcard-color); */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+section {
+    padding: 43px 30px;
+}
+
+.car-icon {
+    margin-bottom: 26px;
+}
+
+.title {
+    margin-bottom: 22px;
+}
+
+.paragraph {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 40px;
+    background: var(--main-headingbuttons-color);
+}
+
+.SEDANS-CARD {
+    background: var(--main-firstcard-color);
+}
+
+.SUVS-CARD {
+    background: var(--main-secondcard-color);
+}
+
+.LUXURY-CARD {
+    background: var(--main-thirdcard-color);
+}
+/* LAYOUT STYLING END */
+
+
+/* FONT STYLING */
+
+.title {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--main-headingbuttons-color);
+    text-transform: uppercase;
+}
+
+p {
+    font-weight: 400;
+    line-height: 2;
+}
+
+.SEDANS-CARD button {
+    color: var(--main-firstcard-color);
+}
+
+.SUVS-CARD button {
+    color: var(--main-secondcard-color);
+}
+
+.LUXURY-CARD button {
+    color: var(--main-thirdcard-color);
+}
+
+@media screen and (min-width: 990px) {
+    body {
+        min-height: 100vh;
+    }
+    .wrapper {
+        width: 800px;
+        height: 460px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .btn {
+        margin-top: 60px;
+    }
+
+    button:hover {
+        color: var(--main-headingbuttons-color);
+        border: 1px solid var(--main-headingbuttons-color);
+        background: none;
+    }
+}
